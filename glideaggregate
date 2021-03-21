@@ -1,4 +1,4 @@
-counting no of records using aggregate function:
+1. counting no of records using aggregate function:
 =================================================
 
 var ga = new GlideAggregate('incident');
@@ -11,7 +11,7 @@ if(ga.next())
 gs.info(ga.getAggregate('COUNT'));
 }
 
-counting - glideaggregate functions : count, sum, avg, min, max, stddev
+2. counting - glideaggregate functions : count, sum, avg, min, max, stddev
 ========================================================================
 
 
@@ -23,3 +23,7 @@ if(ga.next());
   gs.info(ga.getAggregate('SUM','state');
   }
   
+
+remaining Practice:
+
+3: 
