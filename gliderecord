@@ -12,7 +12,7 @@ while(gr.next())
 
 count+=1
 }
-gs.info('Total No of Records manually'+count);
+gs.info('Total No of Records'+count);
 
 
 
@@ -24,8 +24,77 @@ gr.query();
 gs.addInfoMessage('Total No of Records'+gr.getRowCount());
 
 
+
+
+
+
 2: serverside script find only Active Records:
 ==============================================
+
+Manually:
+
+var gr = new GlideRecord('incident');
+gr.query();
+var count=0;
+while(gr.next())
+{
+if(gr.active == true)
+{
+    count+=1
+}}
+gs.info('Total Active Records'+count);
+
+
+using : gr.addActiveQuery()
+==============================
+var gr = new GlideRecord('incident');
+gr.addActiveQuery();
+gr.query();
+var count=0;
+gs.info('Active Records'+gr.getRowCount());
+
+
+
+3: Filter Record and Fetch Details: using addQuery()
+=====================================================
+var gr = new GlideRecord('incident');
+gr.addQuery('urgency',1);
+gr.query();
+var count=0;
+gs.info('Argency'+gr.getRowCount());
+
+
+4: to know User can create, read , write , or delete permission..
+================================================================
+
+var gr = new GlideRecord('incident');
+gr.addQuery('urgency',1);
+gr.query();
+var count=0;
+gs.info('Read permission ==>'+gr.canRead());
+gs.info('write permission ==>'+gr.canWrite());
+gs.info('Delete permission ==>'+gr.canDelete());
+gs.info('Create permission ==>'+gr.canCreate());
+
+
+5: to filter null records addNullQuery():
+=========================================
+
+var gr = new GlideRecord('incident');
+gr.addNullQuery('assignment_group');
+gr.query();
+
+gs.info("assignment group"+gr.getRowCount());
+
+6: to delte the record :
+========================
+var gr= new GlideRecord('incident');
+
+
+
+
+
+
 
 
 
