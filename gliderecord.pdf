@@ -1,0 +1,31 @@
+GlideRecord:
+
+1. Server side script to find how many incidents are existed now.
+
+method: manual count:
+=====================
+var gr = new GlideRecord('incident');
+gr.query();
+var count=0;
+while(gr.next())
+{
+
+count+=1
+}
+gs.info('Total No of Records manually'+count);
+
+
+
+using : getRowCount()
+=======================
+
+var gr = new GlideRecord('incident');
+gr.query();
+gs.addInfoMessage('Total No of Records'+gr.getRowCount());
+
+
+2: serverside script find only Active Records:
+==============================================
+
+
+
