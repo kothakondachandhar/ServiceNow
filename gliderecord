@@ -86,9 +86,19 @@ gr.query();
 
 gs.info("assignment group"+gr.getRowCount());
 
-6: to delte the record :
-========================
-var gr= new GlideRecord('incident');
+
+
+6. to fetch limited records:
+=============================
+var gr = new GlideRecord('incident');
+gr.setLimit(6);
+gr.query();
+gs.info("total records"+gr.getRowCount());
+
+
+
+
+
 
 
 
