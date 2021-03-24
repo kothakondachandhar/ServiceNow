@@ -26,4 +26,27 @@ if(ga.next());
 
 remaining Practice:
 
-3: 
+=====================================================
+importing our own database : employee information
+
+1. aggreage function - count : find the total no of faculties in organization using glide aggreage functions
+
+
+var ga= new GlideAggregate('x_585354_sru_faculty_detils');
+
+ga.addAggregate('COUNT');
+
+
+ga.query();
+
+while(ga.next())
+{
+gs.info("Total No of Employees "+ga.getAggregate('COUNT'));
+}
+
+2 : aggregate function: - count : group by:
+============================================
+
+Employees count department wise
+
+
