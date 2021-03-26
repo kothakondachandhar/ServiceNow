@@ -1,0 +1,10 @@
+In this module you will learn to:
+
+1. Create a Data Source for importing records
+2. Load data into a staging table
+3. Create a Transform Field Map
+Auto Map Matching Fields
+Mapping Assist
+Change or set field values using a Transform Map script
+Coalesce to detect collisions
+Use a Transform Event script to update but not insert records
